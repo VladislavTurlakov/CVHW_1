@@ -16,7 +16,7 @@ import threading
 import sys
 
 points = []
-rectangle_size = 30
+rectangle_size = 80
 running = True
 
 # Функция обработчика кликов мыши
@@ -63,7 +63,7 @@ def main():
         cap = cv2.VideoCapture(args.source)
 
     if not cap.isOpened():
-        print("Ошибка: невозможно открыть источник видео")
+        print("Ошибка: Невозможно открыть источник видео")
         sys.exit()
 
     cv2.namedWindow("Video")
@@ -81,9 +81,9 @@ def main():
 
         # Отображение прямоугольника
         for (x, y) in points:
-            top_left = (x - rectangle_size // 2, y - rectangle_size // 2)
-            bottom_right = (x + rectangle_size // 2, y + rectangle_size // 2)
-            cv2.rectangle(frame, top_left, bottom_right, (0, 0, 255), 2)
+            top_left = (x - rectangle_size, y - rectangle_size // 2)
+            bottom_right = (x + rectangle_size, y + rectangle_size // 2)
+            cv2.rectangle(frame, top_left, bottom_right, (255, 0, 0), 2)
 
         cv2.imshow("Video", frame)
 
