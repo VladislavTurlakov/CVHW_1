@@ -7,6 +7,6 @@
 
 Запуск:
 1. С веб-камеры:   
-   `python program.py --source 0`
+   `python cv13801.py --source 0`
 2. Из видеофайла:  
-   `python program.py --source video.mp4`
+   `python cv13801.py --source video.mp4`
