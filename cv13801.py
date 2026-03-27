@@ -47,10 +47,7 @@ def main():
     global running, points
 
     parser = argparse.ArgumentParser(description="OpenCV Video Click Tracker")
-    parser.add_argument(
-        "--source",
-        type = str,
-        default = "0",
+    parser.add_argument("--source", type = str, default = "0",
         help = "Источник видео: 0 - камера, или путь к видеофайлу"
     )
 
